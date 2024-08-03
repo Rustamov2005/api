@@ -1,5 +1,11 @@
-from .models import Alobom, Artest, Songs
+from .models import Alobom, Artest, Songs, Bastakora
 from rest_framework import serializers
+
+
+class BastakoraSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bastakora
+        fields = '__all__'
 
 
 class ArtestSerializer(serializers.ModelSerializer):

@@ -13,6 +13,9 @@ class Artest(models.Model):
     def __str__(self):
         return self.get_full_name()
 
+    class Meta:
+        ordering = ['id']
+
 
 class Alobom(models.Model):
     title = models.CharField(max_length=50)
@@ -22,6 +25,9 @@ class Alobom(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        ordering = ['id']
+
 
 class Songs(models.Model):
     title = models.CharField(max_length=50)
@@ -29,3 +35,21 @@ class Songs(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['id']
+
+
+class Bastakora(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    username = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.first_name}"
+
+    class Meta:
+        ordering = ['id']
+
+
